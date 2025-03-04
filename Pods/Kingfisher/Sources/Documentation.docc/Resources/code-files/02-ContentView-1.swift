@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  XCodeCloudAzamsharp
-//
-//  Created by Ujjwal Arora on 05/03/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -13,12 +6,8 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Testing xcode cloud issue with cocoaPods")
+            Text("Hello, world!")
         }
         .padding()
     }
-}
-
-#Preview {
-    ContentView()
 }

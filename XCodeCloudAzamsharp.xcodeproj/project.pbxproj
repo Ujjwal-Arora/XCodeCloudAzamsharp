@@ -6,13 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DC3D4329B13A6282BF13DBF9 /* Pods_XCodeCloudAzamsharp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95ACE8A0E72D6776D5F5FBCC /* Pods_XCodeCloudAzamsharp.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		1635E942DCA57D0211AE9678 /* Pods-XCodeCloudAzamsharp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCodeCloudAzamsharp.release.xcconfig"; path = "Target Support Files/Pods-XCodeCloudAzamsharp/Pods-XCodeCloudAzamsharp.release.xcconfig"; sourceTree = "<group>"; };
+		400E71D80E8EE03D5439EA64 /* Pods-XCodeCloudAzamsharp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCodeCloudAzamsharp.debug.xcconfig"; path = "Target Support Files/Pods-XCodeCloudAzamsharp/Pods-XCodeCloudAzamsharp.debug.xcconfig"; sourceTree = "<group>"; };
+		95ACE8A0E72D6776D5F5FBCC /* Pods_XCodeCloudAzamsharp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCodeCloudAzamsharp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A810B6B22D77902500809572 /* XCodeCloudAzamsharp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCodeCloudAzamsharp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A810B6B42D77902500809572 /* XCodeCloudAzamsharp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = XCodeCloudAzamsharp;
 			sourceTree = "<group>";
 		};
@@ -23,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3D4329B13A6282BF13DBF9 /* Pods_XCodeCloudAzamsharp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +44,8 @@
 			children = (
 				A810B6B42D77902500809572 /* XCodeCloudAzamsharp */,
 				A810B6B32D77902500809572 /* Products */,
+				E83293F4D30F17616437B18B /* Pods */,
+				BF43B4DDF8AF3C16DC6BFC97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,6 +57,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BF43B4DDF8AF3C16DC6BFC97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95ACE8A0E72D6776D5F5FBCC /* Pods_XCodeCloudAzamsharp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E83293F4D30F17616437B18B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				400E71D80E8EE03D5439EA64 /* Pods-XCodeCloudAzamsharp.debug.xcconfig */,
+				1635E942DCA57D0211AE9678 /* Pods-XCodeCloudAzamsharp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -52,9 +82,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A810B6C02D77902700809572 /* Build configuration list for PBXNativeTarget "XCodeCloudAzamsharp" */;
 			buildPhases = (
+				6C84C83B970AF793CA59875E /* [CP] Check Pods Manifest.lock */,
 				A810B6AE2D77902500809572 /* Sources */,
 				A810B6AF2D77902500809572 /* Frameworks */,
 				A810B6B02D77902500809572 /* Resources */,
+				C27DDC381CD483385F0B9844 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -64,8 +96,6 @@
 				A810B6B42D77902500809572 /* XCodeCloudAzamsharp */,
 			);
 			name = XCodeCloudAzamsharp;
-			packageProductDependencies = (
-			);
 			productName = XCodeCloudAzamsharp;
 			productReference = A810B6B22D77902500809572 /* XCodeCloudAzamsharp.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +143,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C84C83B970AF793CA59875E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XCodeCloudAzamsharp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C27DDC381CD483385F0B9844 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XCodeCloudAzamsharp/Pods-XCodeCloudAzamsharp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XCodeCloudAzamsharp/Pods-XCodeCloudAzamsharp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XCodeCloudAzamsharp/Pods-XCodeCloudAzamsharp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A810B6AE2D77902500809572 /* Sources */ = {
@@ -246,6 +318,7 @@
 		};
 		A810B6C12D77902700809572 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 400E71D80E8EE03D5439EA64 /* Pods-XCodeCloudAzamsharp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -275,6 +348,7 @@
 		};
 		A810B6C22D77902700809572 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1635E942DCA57D0211AE9678 /* Pods-XCodeCloudAzamsharp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

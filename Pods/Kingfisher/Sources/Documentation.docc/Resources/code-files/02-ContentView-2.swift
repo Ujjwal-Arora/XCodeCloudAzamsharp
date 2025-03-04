@@ -1,11 +1,5 @@
-//
-//  ContentView.swift
-//  XCodeCloudAzamsharp
-//
-//  Created by Ujjwal Arora on 05/03/25.
-//
-
 import SwiftUI
+import Kingfisher
 
 struct ContentView: View {
     var body: some View {
@@ -13,12 +7,11 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Testing xcode cloud issue with cocoaPods")
+            Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            print(KingfisherManager.shared)
+        }
     }
-}
-
-#Preview {
-    ContentView()
 }
