@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A810B7082D779B6B00809572 /* ci_post_clone.sh in Sources */ = {isa = PBXBuildFile; fileRef = A810B7072D779B6B00809572 /* ci_post_clone.sh */; };
 		DC3D4329B13A6282BF13DBF9 /* Pods_XCodeCloudAzamsharp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95ACE8A0E72D6776D5F5FBCC /* Pods_XCodeCloudAzamsharp.framework */; };
 /* End PBXBuildFile section */
 
@@ -16,13 +15,41 @@
 		400E71D80E8EE03D5439EA64 /* Pods-XCodeCloudAzamsharp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCodeCloudAzamsharp.debug.xcconfig"; path = "Target Support Files/Pods-XCodeCloudAzamsharp/Pods-XCodeCloudAzamsharp.debug.xcconfig"; sourceTree = "<group>"; };
 		95ACE8A0E72D6776D5F5FBCC /* Pods_XCodeCloudAzamsharp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCodeCloudAzamsharp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A810B6B22D77902500809572 /* XCodeCloudAzamsharp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCodeCloudAzamsharp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A810B7072D779B6B00809572 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A810B70D2D779CBB00809572 /* Exceptions for "ci_scripts" folder in "XCodeCloudAzamsharp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ci_post_clone.sh,
+			);
+			target = A810B6B12D77902500809572 /* XCodeCloudAzamsharp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		A810B70E2D779CBB00809572 /* Exceptions for "ci_scripts" folder in "Compile Sources" phase from "XCodeCloudAzamsharp" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = A810B6AE2D77902500809572 /* Sources */;
+			membershipExceptions = (
+				ci_post_clone.sh,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A810B6B42D77902500809572 /* XCodeCloudAzamsharp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = XCodeCloudAzamsharp;
+			sourceTree = "<group>";
+		};
+		A810B70A2D779CBB00809572 /* ci_scripts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A810B70D2D779CBB00809572 /* Exceptions for "ci_scripts" folder in "XCodeCloudAzamsharp" target */,
+				A810B70E2D779CBB00809572 /* Exceptions for "ci_scripts" folder in "Compile Sources" phase from "XCodeCloudAzamsharp" target */,
+			);
+			path = ci_scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -42,7 +69,7 @@
 		A810B6A92D77902500809572 = {
 			isa = PBXGroup;
 			children = (
-				A810B7062D779B5100809572 /* ci_scripts */,
+				A810B70A2D779CBB00809572 /* ci_scripts */,
 				A810B6B42D77902500809572 /* XCodeCloudAzamsharp */,
 				A810B6B32D77902500809572 /* Products */,
 				E83293F4D30F17616437B18B /* Pods */,
@@ -56,14 +83,6 @@
 				A810B6B22D77902500809572 /* XCodeCloudAzamsharp.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A810B7062D779B5100809572 /* ci_scripts */ = {
-			isa = PBXGroup;
-			children = (
-				A810B7072D779B6B00809572 /* ci_post_clone.sh */,
-			);
-			path = ci_scripts;
 			sourceTree = "<group>";
 		};
 		BF43B4DDF8AF3C16DC6BFC97 /* Frameworks */ = {
@@ -102,6 +121,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				A810B6B42D77902500809572 /* XCodeCloudAzamsharp */,
+				A810B70A2D779CBB00809572 /* ci_scripts */,
 			);
 			name = XCodeCloudAzamsharp;
 			productName = XCodeCloudAzamsharp;
@@ -199,7 +219,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A810B7082D779B6B00809572 /* ci_post_clone.sh in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
